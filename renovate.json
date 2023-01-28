@@ -1,0 +1,51 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":prImmediately",
+    "schedule:monthly"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": [
+        "gradle"
+      ],
+      "addLabels": [
+        "gradle"
+      ]
+    },
+    {
+      "matchManagers": [
+        "gradle-wrapper"
+      ],
+      "addLabels": [
+        "gradle_wrapper"
+      ]
+    },
+    {
+      "matchManagers": [
+        "github-actions"
+      ],
+      "addLabels": [
+        "github_actions"
+      ]
+    }
+  ],
+  "hostRules": [
+    {
+      "matchHost": "https://maven.google.com",
+      "addLabels": [
+        "android"
+      ]
+    },
+    {
+      "matchHost": "https://plugins.gradle.org/m2",
+      "addLabels": [
+        "gradle_plugin"
+      ]
+    }
+  ],
+  "labels": [
+    "dependencies"
+  ]
+}
