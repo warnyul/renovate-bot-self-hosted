@@ -3,7 +3,10 @@ on:
   workflow_dispatch:
     inputs:
       logLevel:
-        description: Renovate's log level.
+        description: >
+          Renovate log levels are used to control the amount of detail that is output in the Renovate log files.
+          Log levels range from fatal (no detail) to debug (most detail).
+          Log levels are used to help diagnose issues within the Renovate system and are adjusted as needed.
         required: true
         default: 'warn'
         options:
