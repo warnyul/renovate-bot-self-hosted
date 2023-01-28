@@ -1,0 +1,42 @@
+name: Renovate
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: Renovate's log level.
+        required: true
+        default: 'warn'
+        options:
+          - debug
+          - info
+          - warn
+          - error
+          - fatal
+  schedule:
+    # The "*" (#42, asterisk) character has special semantics in YAML, so this
+    # string has to be quoted.
+    - cron: '0 0 * * 1'
+jobs:
+  renovate:
+    runs-on: ubuntu-20.04
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.3.0
+      - name: Request a Github token
+        id: action-github-app-token
+        uses: getsentry/action-github-app-token@v2
+        with:
+          app_id: ${{ secrets.RENOVATE_APP_ID }}
+          private_key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
+      - name: Self-hosted Renovate
+        uses: renovatebot/github-action@v34.82.0
+        with:
+          configurationFile: renovate.json
+          token: ${{ steps.action-github-app-token.outputs.token }}
+        env:
+          LOG_LEVEL: ${{ inputs.logLevel || 'warn' }}
+          RENOVATE_AUTODISCOVER: true
+          RENOVATE_PLATFORM: github
+
