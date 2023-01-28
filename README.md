@@ -16,7 +16,7 @@ The workflow has the following input:
 
 ## Workflow Configuration
 
-The workflow is defined in the `main.yml` file and contains the following steps:
+The workflow is defined in the `renovate.yml` file and contains the following steps:
 1. Checkout: checkouts the repository to the runner.
 2. Request a Github token: request a Github token using `jwenz723/github-app-installation-token@v0.0.4` action.
 3. Self-hosted Renovate: runs the renovate using `renovatebot/github-action@v34.82.0` action.
