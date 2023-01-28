@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@v3.3.0
       - name: Request a Github token
         id: action-github-app-token
-        uses: getsentry/action-github-app-token@v2
+        uses: tibdex/github-app-token@v1.8.0
         with:
           app_id: ${{ secrets.RENOVATE_APP_ID }}
           private_key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
