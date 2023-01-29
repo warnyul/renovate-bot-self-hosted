@@ -35,10 +35,9 @@ jobs:
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@v34.82.0
         with:
-          configurationFile: renovate.json
+          configurationFile: renovate-config.js
           token: ${{ steps.action-github-app-token.outputs.token }}
         env:
           LOG_LEVEL: ${{ inputs.logLevel || 'warn' }}
           RENOVATE_AUTODISCOVER: true
-          RENOVATE_PLATFORM: github
 
