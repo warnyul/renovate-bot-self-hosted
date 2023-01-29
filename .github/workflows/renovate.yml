@@ -2,6 +2,8 @@ name: Renovate
 on:
   pull_request:
     branches: [ main ]
+  push:
+    branches: [ main ]
   workflow_dispatch:
     inputs:
       logLevel:
@@ -11,11 +13,12 @@ on:
         required: true
         default: 'warn'
         options:
-        - debug
-        - info
-        - warn
-        - error
-        - fatal
+          - trace
+          - debug
+          - info
+          - warn
+          - error
+          - fatal
   schedule:
     # The "*" (#42, asterisk) character has special semantics in YAML, so this
     # string has to be quoted.
