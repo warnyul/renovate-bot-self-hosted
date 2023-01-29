@@ -1,6 +1,7 @@
 module.exports = {
     branchPrefix: 'renovate/',
-    gitAuthor: 'Renovate Bot <bot@renovateapp.com>',
+    username: 'renovate-self-hosted-apter[bot]',
+    gitAuthor: 'Renovate Self Hosted Apter <123456+renovate-self-hosted-apter[bot]@users.noreply.github.com>',
     onboarding: false,
     platform: 'github',
     includeForks: true,
