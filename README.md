@@ -4,15 +4,17 @@ This repository contains a GitHub Actions workflow for using [Renovate](https://
 
 ## Usage
 
-The workflow can be triggered in two ways:
+The workflow can be triggered in 4 ways:
 1. On demand, by manually dispatching the workflow and specifying the desired log level.
-2. On a schedule, by configuring a cron schedule.
+2. On a schedule every 30th minutes, by configuring a cron schedule.
+3. On push to main branch
+4. On push to a pull request
 
 ## Inputs
 
 The workflow has the following input:
 
-- `logLevel`: Renovate log levels are used to control the amount of detail that is output in the Renovate log files. Possible log level options: debug, info, warn, error, and fatal.
+- `logLevel`: Renovate log levels are used to control the amount of detail that is output in the Renovate log files. Possible log level options: trace, debug, info, warn, error, and fatal.
 
 ## Workflow Configuration
 
