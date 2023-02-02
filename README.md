@@ -6,7 +6,7 @@ This repository contains a GitHub Actions workflow for using [Renovate](https://
 
 The workflow can be triggered in 4 ways:
 1. On demand, by manually dispatching the workflow and specifying the desired log level.
-2. On a schedule every 30th minutes, by configuring a cron schedule.
+2. On a schedule every 30 minutes, by configuring a cron schedule.
 3. On push to main branch
 4. On push to a pull request
 
@@ -21,7 +21,7 @@ The workflow has the following input:
 The workflow is defined in the `renovate.yml` file and contains the following steps:
 1. Checkout: checkouts the repository to the runner.
 2. Request a Github token: request a Github token using `getsentry/action-github-app-token@v2.0.0` action.
-3. Self-hosted Renovate: runs the renovate using `renovatebot/github-action@v34.82.0` action.
+3. Self-hosted Renovate: runs the renovate using `renovatebot/github-action@v34.109.1` action.
 
 ## Secrets
 
@@ -39,5 +39,3 @@ It is mandatory to have `renovate.json` file in the root of the repository with 
 - [GitHub Actions](https://docs.github.com/en/actions)
 - [getsentry/action-github-app-token](https://github.com/getsentry/action-github-app-token)
 - [renovatebot/github-action](https://github.com/renovatebot/github-action)
-
-You can use this as a template and customize according to your or organization use case.
