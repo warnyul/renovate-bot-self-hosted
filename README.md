@@ -1,8 +1,15 @@
+[![Renovate](https://github.com/apter-tech/renovate-bot-self-hosted/actions/workflows/renovate.yml/badge.svg)](https://github.com/apter-tech/renovate-bot-self-hosted/actions/workflows/renovate.yml)
+
 # Renovate Workflow
 
 This repository contains a GitHub Actions workflow for using [Renovate](https://renovatebot.com/) to easily update dependencies within your organization. The setup is simple and straightforward, making it easy to keep your dependencies up-to-date and secure.
 
 ## Usage
+
+If you want to enable Renovate on a repository in the organization.
+1. Go to the [Renovate GitHub App's settings page](https://github.com/organizations/apter-tech/settings/installations/33594344).
+2. Scroll down to the Repository Access section.
+3. Select your repository to enable Renovate.
 
 The workflow can be triggered in 4 ways:
 1. On demand, by manually dispatching the workflow and specifying the desired log level.
