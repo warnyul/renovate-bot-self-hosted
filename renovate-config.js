@@ -2,7 +2,13 @@ module.exports = {
     branchPrefix: 'renovate/',
     username: 'renovate-self-hosted-apter[bot]',
     gitAuthor: 'Renovate Self Hosted Apter <123456+renovate-self-hosted-apter[bot]@users.noreply.github.com>',
-    onboarding: false,
+    onboarding: true,
+    onboardingConfig: {
+        "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+        "extends": [
+            "github>apter-tech/renovate-config#0.1.0"
+        ]
+    },
     platform: 'github',
     includeForks: true,
     packageRules: [
