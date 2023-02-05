@@ -22,6 +22,13 @@ The workflow can be triggered in 4 ways:
 The workflow has the following input:
 
 - `logLevel`: Renovate log levels are used to control the amount of detail that is output in the Renovate log files. Possible log level options: trace, debug, info, warn, error, and fatal.
+- `dryRun`: Use dryRun to preview the behavior of Renovate in logs, without making any changes to the repository files. You can choose from the following behaviors for the dryRun config option:
+    - `null`: Default behavior (except on pull requests) - Performs a regular Renovate run including creating/updating/deleting branches and PRs
+    - `"extract"`: Performs a very quick package file scan to identify the extracted dependencies
+    - `"lookup"`: Performs a package file scan to identify the extracted dependencies and updates available
+    - `"full"`: Default behaviour on pull requests. Performs a dry run by logging messages instead of creating/updating/deleting branches and PRs.
+    
+    Information provided mainly in debug log level.
 
 ## Workflow Configuration
 
