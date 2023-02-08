@@ -2,18 +2,18 @@ name: Renovate
 on:
   pull_request:
     branches: [ main ]
-    paths-ignore: 
-      '**.md'
+    paths: 
+      '!*.md'
   push:
     branches: [ main ]
-    paths-ignore: 
-      '**.md'
+    paths: 
+      '!*.md'
   workflow_dispatch:
     inputs:
       logLevel:
-        description: >
+        description: |
           Renovate log levels are used to control the amount of detail that is output in the Renovate log files.
-          Log levels range from fatal (no detail) to debug (most detail).
+          Log levels range: trace, debug, info, warn, error, fatal.
         required: true
         default: 'warn'
         options:
@@ -24,7 +24,7 @@ on:
           - error
           - fatal
       dryRun:
-        description: >
+        description: |
           Use dryRun to preview the behavior of Renovate in logs, without making any changes to the repository files.
 
           You can choose from the following behaviors for the dryRun config option:
@@ -74,4 +74,3 @@ jobs:
           LOG_LEVEL: ${{ inputs.logLevel || 'warn' }}
           RENOVATE_AUTODISCOVER: true
           RENOVATE_DRY_RUN: ${{ steps.renovate-setup.outputs.DRY_RUN }}
-
