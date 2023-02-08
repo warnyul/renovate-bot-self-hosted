@@ -34,8 +34,8 @@ The workflow has the following input:
 
 The workflow is defined in the `renovate.yml` file and contains the following steps:
 1. Checkout: checkouts the repository to the runner.
-2. Request a Github token: request a Github token using `getsentry/action-github-app-token@v2.0.0` action.
-3. Self-hosted Renovate: runs the renovate using `renovatebot/github-action@v34.109.1` action.
+2. Request a Github token: request a Github token using `getsentry/action-github-app-token` action.
+3. Self-hosted Renovate: runs the renovate using `renovatebot/github-action` action.
 
 ## Secrets
 
