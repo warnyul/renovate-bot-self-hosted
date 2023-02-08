@@ -6,7 +6,7 @@ module.exports = {
     onboardingConfig: {
         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
         "extends": [
-            "github>apter-tech/renovate-config#v0.1.0"
+            "github>apter-tech/renovate-config#v0.2.0"
         ]
     },
     platform: 'github',
