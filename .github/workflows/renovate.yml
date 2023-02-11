@@ -2,12 +2,14 @@ name: Renovate
 on:
   pull_request:
     branches: [ main ]
-    paths: 
-      '!*.md'
+    paths-ignore: 
+      - '**.md'
+      - 'renovate.json'
   push:
     branches: [ main ]
-    paths: 
-      '!*.md'
+    paths-ignore: 
+      - '**.md'
+      - 'renovate.json'
   workflow_dispatch:
     inputs:
       logLevel:
