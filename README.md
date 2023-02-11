@@ -13,7 +13,7 @@ If you want to enable Renovate on a repository in the organization.
 
 The workflow can be triggered in 4 ways:
 1. On demand, by manually dispatching the workflow and specifying the desired log level.
-2. On a schedule every 30 minutes, by configuring a cron schedule.
+2. On a schedule every 15 minutes between 8:00 and 17:00 (CET) on every day between Monday and Friday, by configuring a cron schedule.
 3. On push to main branch
 4. On push to a pull request
 
