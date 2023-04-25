@@ -53,7 +53,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.5.0
+        uses: actions/checkout@v3.5.2
       - name: Request a Github token
         id: action-github-app-token
         uses: getsentry/action-github-app-token@v2.0.0
