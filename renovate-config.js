@@ -10,7 +10,7 @@ module.exports = {
     ]
   },
   platform: 'github',
-  includeForks: true,
+  forkProcessing: "enabled",
   packageRules: [
     {
       description: 'lockFileMaintenance',
@@ -23,7 +23,7 @@ module.exports = {
         'lockFileMaintenance',
       ],
       dependencyDashboardApproval: false,
-      stabilityDays: 0,
+      minimumReleaseAge: null,
     },
   ],
 };
