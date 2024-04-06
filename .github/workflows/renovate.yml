@@ -68,7 +68,7 @@ jobs:
             echo "DRY_RUN=${{ inputs.dryRun }}" >> $GITHUB_OUTPUT
           fi
       - name: Self-hosted Renovate
-        uses: renovatebot/github-action@78bdcb3bffa5e95e646183ca0a2ac2895abd6a20 # v40.1.3
+        uses: renovatebot/github-action@7d358366277001f3316d7fa54ff49a81c0158948 # v40.1.7
         with:
           configurationFile: renovate-config.js
           token: ${{ steps.action-github-app-token.outputs.token }}
