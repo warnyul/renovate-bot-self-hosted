@@ -53,7 +53,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
       - name: Request a Github token
         id: action-github-app-token
         uses: getsentry/action-github-app-token@v3.0.0
@@ -68,7 +68,7 @@ jobs:
             echo "DRY_RUN=${{ inputs.dryRun }}" >> $GITHUB_OUTPUT
           fi
       - name: Self-hosted Renovate
-        uses: renovatebot/github-action@21d88b0bf0183abcee15f990011cca090dfc47dd # v40.1.12
+        uses: renovatebot/github-action@042670e39b8d7335e992c3fa526ecbfbd52ef57b # v40.2.2
         with:
           configurationFile: renovate-config.js
           token: ${{ steps.action-github-app-token.outputs.token }}
